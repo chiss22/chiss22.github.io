@@ -1,5 +1,5 @@
 ---
-title: Home
+title: chrisbowman.design
 layout: default
 ---
 
