@@ -1,5 +1,5 @@
 ---
-title: chrisbowman.design
+title: CBD
 layout: default
 ---
 
