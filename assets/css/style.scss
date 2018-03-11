@@ -27,4 +27,18 @@ body {
 	p {
 		margin: 0 0 1em 0;
 	}
+
+	.wrapper {
+		margin: 0 auto;
+		max-width: calc(1200px + 30px);
+		padding: 0 15px;
+	}
+
+	header {
+		@extend .wrapper;
+	}
+
+	main {
+		@extend .wrapper;
+	}
 }
