@@ -4,7 +4,8 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:300|Monoton');
 
 $colour-bg: #3F51B5;
-$colour-text: #FFF;
+$colour-text: rgba(255,255,255,0.9);
+$colour-link: rgba(255,255,255,1);
 $colour-primary: #FF5722;
 
 body {
@@ -13,14 +14,14 @@ body {
 	color: $colour-text;
 	font-size: calc(0.5vw + 16px);
 	font-weight: 100;
-	line-height: 1.8em;
+	line-height: 1.6em;
 	background: $colour-bg;
 
 	h1 {
 		margin: 0.6em 0 0.4em 0;
 		color: #FF5722;
 		font-family: Monoton;
-		font-size: 80px;
+		font-size: 100px;
 		font-weight: 300;
 		line-height: 1.2;
 	}
@@ -36,16 +37,16 @@ body {
 	a {
 		&:link,
 		&:visited {
-			color: $colour-text;
+			color: $colour-link;
 			text-decoration: none;
-			border-bottom: 4px solid rgba(255,255,255,0.2);
+			border-bottom: 4px solid rgba(255,255,255,0.4);
 			transition: all 0.2s;
 		}
 		&:hover,
 		&:active {
 			color: $colour-bg;
-			background: $colour-text;
-			border-bottom-color: $colour-text;
+			background: $colour-link;
+			border-bottom-color: $colour-link;
 		}
 	}
 
