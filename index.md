@@ -6,9 +6,9 @@ layout: default
 <div class="posts">
 {% for post in site.posts %}
 	<article>
-		<a href="{{ post.url }}">{{ post.title}}</a>
+		<h2><a href="{{ post.url }}">{{ post.title}}</a></h2>
 		<span class="posts-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-		<div class="excerpt">{{ post.excerpt }}</div>
+		<div class="content">{{ post.content }}</div>
 	</article>
 {% endfor %}
 </div>
