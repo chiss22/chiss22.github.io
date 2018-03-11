@@ -7,9 +7,12 @@ body {
 	margin: 0;
 	font-family: 'Mina';
 	colour: #FFF;
+	font-size: calc(2vw + 8px);
+	font-weight: 100;
 	background: #3F51B5;
 
 	h1 {
+		padding: 0.6em 0 0.4em 0;
 		color: #FF5722;
 		font-family: Monoton;
 		font-size: calc(2vw + 80px);
@@ -17,12 +20,11 @@ body {
 		line-height: 1.2;
 	}
 	h2, h3, h4, h5, h6 {
+		padding: 0.6em 0 0.4em 0;
 		font-weight: 900;
 	}
 
 	p {
-		color: #FFF;
-		font-size: calc(2vw + 16px);
-		font-weight: 300;
+		padding: 0 0 1em 0;
 	}
 }
