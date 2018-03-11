@@ -3,10 +3,17 @@ title: chrisbowman.design
 layout: default
 ---
 
-<ul class="posts">
+<div class="posts">
 {% for post in site.posts %}
-	<li><a href="{{ post.url }}">{{ post.title}}</a>
+	<article>
+		<a href="{{ post.url }}">{{ post.title}}</a>
 		<span class="posts-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-	</li>
+		<div class="excerpt">{{ post.excerpt }}</div>
+	</article>
 {% endfor %}
-</ul>
+</div>
+
+<div class="aside">
+	<h2>Who?</h2>
+	<p>Hi, I am Chris; professor, logo designer, UI specialist, and VP design & dev at Sprout Studio.</p>
+</div>
