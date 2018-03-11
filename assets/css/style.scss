@@ -3,13 +3,17 @@
 
 @import url('https://fonts.googleapis.com/css?family=Ubuntu|Monoton');
 
+$colour-bg: #3F51B5;
+$colour-text: #FFF;
+$colour-primary: #FF5722;
+
 body {
 	margin: 0;
 	font-family: Ubuntu;
-	color: #FFF;
+	color: $colour-text;
 	font-size: calc(2vw + 8px);
 	font-weight: 100;
-	background: #3F51B5;
+	background: $colour-bg;
 
 	h1 {
 		margin: 0.6em 0 0.4em 0;
@@ -26,6 +30,22 @@ body {
 
 	p {
 		margin: 0 0 1em 0;
+	}
+
+	a {
+		&:link,
+		&:visited {
+			color: $colour-text;
+			text-decoration: none;
+			border-bottom: 4px solid rgba(255,255,255,0.2);
+			transition: all 0.2s;
+		}
+		&:hover,
+		&:active {
+			color: $colour-bg;
+			background: $colour-text;
+			border-bottom-color: $colour-text;
+		}
 	}
 
 	.wrapper {
