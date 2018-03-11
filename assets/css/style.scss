@@ -11,7 +11,7 @@ body {
 	margin: 0;
 	font-family: Ubuntu;
 	color: $colour-text;
-	font-size: calc(2vw + 8px);
+	font-size: calc(0.5vw + 16px);
 	font-weight: 100;
 	background: $colour-bg;
 
@@ -50,7 +50,7 @@ body {
 
 	.wrapper {
 		margin: 0 auto;
-		max-width: calc(1200px + 30px);
+		max-width: calc(900px + 30px);
 		padding: 0 15px;
 	}
 
