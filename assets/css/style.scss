@@ -12,10 +12,10 @@ body {
 	background: #3F51B5;
 
 	h1 {
-		padding: 0.6em 0 0.4em 0;
+		margin: 0.6em 0 0.4em 0;
 		color: #FF5722;
 		font-family: Monoton;
-		font-size: calc(2vw + 80px);
+		font-size: 80px;
 		font-weight: 300;
 		line-height: 1.2;
 	}
@@ -25,6 +25,6 @@ body {
 	}
 
 	p {
-		padding: 0 0 1em 0;
+		margin: 0 0 1em 0;
 	}
 }
