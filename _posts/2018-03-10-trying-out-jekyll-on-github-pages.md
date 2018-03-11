@@ -5,6 +5,34 @@ date: 2018-03-10
 categories: development
 ---
 
-## Welcome to fun
+## Something new
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Part of being a professor in the web design field means that you have to be prepared when the inevitable moment comes; a student ask you if you know about X. X of course being that latest and greatest movement in our industry: CSS Grid and Flex, the latest IDE, or animating gradients for a sampling.
+
+Now of course as a prof we have all the time in the world to research and play with the latest, right? Unfortunately no. We find ourselves instead in a constant backlog of work, not to mention, as a part-time prof, I still have my [day job](https://www.getsproutstudio.com/), meaning free-time to play is simply not a reality.
+
+With that said (and frankly out of the way), let's get back to business. Even without extra play time, we still someone find a way, so, welcome to my personal site project built with something pretty freakin' cool: GitHub Pages and Jekyll.
+
+### GitHub Pages
+
+> Hosted directly from your GitHub repository. Just edit, push, and your changes are live.
+
+[GitHub Pages](https://pages.github.com/) allows you to build an entire flat-file website from scratch, host on GitHub for _FREE_ (what?!), and even configure SASS to auto-pre-compile.
+
+Not to mention, it is _crazy_ fast, supports HTTPS, and let's you use your own domain. Nuts right?
+
+_Disclaimer: I am working on a vid tutorial for this in the future, so stay *tuned*_
+
+### Jekyll
+
+Where things get even more badass is (Jekyll)[https://jekyllrb.com/] ((Quick-start Guide)[https://jekyllrb.com/docs/quickstart/]). Jekyll is a static website generator powered by *Markdown*, *Textile*, and *Liquid*, HTML, CSS, and JS.
+
+With Jekyll you can easily create _includes_ for things like navigation, headers and footers, run a _blog_, and using Markdown, quickly and easily write content!
+
+### Where to go from here
+
+Realizing that yes, this site right now is completely underwhelming looking (just literally started it), the next step is to make it better looking (planning a slick 80s graphics theme).
+
+For now, stay trendy,
+
+_Chris_
