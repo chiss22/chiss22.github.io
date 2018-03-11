@@ -1,17 +1,17 @@
 ---
 ---
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Mina|Monoton');
 
 body {
 	margin: 0;
-	font-family: Roboto Slab;
+	font-family: 'Mina';
 	colour: #FFF;
-	background: purple;
+	background: darkpurple;
 
 	h1, h2, h3, h4, h5, h6 {
-		color: orange;
-		font-weight: 900;
+		color: lightpurple;
+		font-family: Monoton;
 	}
 
 	p {
