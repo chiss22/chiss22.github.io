@@ -1,18 +1,20 @@
 <!doctype html>
 <html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<head>
+		<title>{{ page.title }} | {{ site.title }}</title>
 
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <meta name="viewport" content="width=device-width">
-  </head>
-  <body>
-	  <header>
-		  <h1>{{ site.title }}</h1>
-	  </header>
-	  <main>
-		  {{ content }}
-	  </main>
-  </body>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+		<link rel="stylesheet" href="{{ "/assets/style.css" | relative_url }}">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<header>
+			<h1>{{ page.title }}</h1>
+		</header>
+		<main>
+			{{ content }}
+		</main>
+	</body>
 </html>
