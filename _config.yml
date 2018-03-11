@@ -1,8 +1,3 @@
 name: Chris Bowman
 title: Chris Bowman
 description: Playing with Jekyll
-show_downloads: true
-google_analytics:
-theme: chrisbowman-design
-sass:
-    style: compressed
