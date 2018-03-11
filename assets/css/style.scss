@@ -7,12 +7,14 @@ body {
 	margin: 0;
 	font-family: 'Mina';
 	colour: #FFF;
-	background: darkpurple;
+	background: #3F51B5;
 
 	h1 {
-		color: lightpurple;
+		color: #FF5722;
 		font-family: Monoton;
+		font-size: calc(1vw * 80px);
 		font-weight: 300;
+		line-height: 1.2;
 	}
 	h2, h3, h4, h5, h6 {
 		font-weight: 900;
@@ -20,6 +22,7 @@ body {
 
 	p {
 		color: #FFF;
+		font-size: calc(1vw * 16px);
 		font-weight: 300;
 	}
 }
