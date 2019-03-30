@@ -13,6 +13,6 @@ layout: default
 </blog>
 
 <aside>
-	<h2>Who?</h2>
+	<h3>Who?</h3>
 	<p>Hi, I am Chris; professor, logo designer, UI specialist, and VP design & dev at Sprout Studio.</p>
 </aside>
