@@ -56,11 +56,22 @@ body {
 		padding: 0 15px;
 	}
 
+	/* Layout */
 	header {
 		@extend .wrapper;
 	}
 
 	main {
 		@extend .wrapper;
+		display: grid;
+		grid-template-areas: "blog blog aside";
+	}
+
+	main blog {
+		grid-area: blog;
+	}
+
+	main aside {
+		grid-area: aside;
 	}
 }
