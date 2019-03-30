@@ -58,7 +58,57 @@ body {
 
 	/* Layout */
 	header {
-		@extend .wrapper;
+		header {
+		    background: linear-gradient(90deg, #480032, #270250);
+		    overflow: hidden;
+		}
+
+		sun {
+		    background: linear-gradient(120deg, rgb(255, 249, 180), rgb(255, 210, 82));
+		    width: 50vw;
+		    height: 50vw;
+		    margin: 0 auto;
+		    display: block;
+		    border-radius: 50vw;
+		    bottom: -20vw;
+		    position: relative;
+		    box-shadow: 0 0 10vw 1vw rgba(255, 0, 141, 0.5), inset 0 0 10vw 0 rgba(255, 255, 255, 0.5), inset 0 0 0 1px #730151;
+		    overflow: hidden;
+		    border: 1px solid #720151;
+		}
+
+		line {
+		    display: block;
+		    background: #700050;
+		    width: 110%;
+		    left: -5%;
+		    position: absolute;
+		}
+
+		line:nth-child(1) {
+		    top: 5%;
+		    height: 4vw;
+		}
+		line:nth-child(2) {
+		    top: 15%;
+		    height: 3vw;
+		}
+		line:nth-child(3) {
+		    top: 24%;
+		    height: 2vw;
+		}
+		line:nth-child(4) {
+		    top: 32%;
+		    height: 1.6vw;
+		}
+		line:nth-child(5) {
+		    top: 42%;
+		    height: 1.2vw;
+		}
+		line:nth-child(6) {
+		    top: 51%;
+		    height: 0.8vw;
+		}
 	}
 
 	main {
