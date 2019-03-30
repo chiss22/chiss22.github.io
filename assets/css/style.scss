@@ -58,30 +58,28 @@ body {
 
 	/* Layout */
 	header {
-		header {
-		    background: linear-gradient(90deg, #480032, #270250);
-		    overflow: hidden;
-		}
+	    background: linear-gradient(90deg, #480032, #270250);
+	    overflow: hidden;
 
 		sun {
-		    background: linear-gradient(120deg, rgb(255, 249, 180), rgb(255, 210, 82));
+			display: block;
+			position: relative;
 		    width: 50vw;
 		    height: 50vw;
 		    margin: 0 auto;
-		    display: block;
-		    border-radius: 50vw;
-		    bottom: -20vw;
-		    position: relative;
+			bottom: -20vw;
+			background: linear-gradient(120deg, rgb(255, 249, 180), rgb(255, 210, 82));
 		    box-shadow: 0 0 10vw 1vw rgba(255, 0, 141, 0.5), inset 0 0 10vw 0 rgba(255, 255, 255, 0.5), inset 0 0 0 1px #730151;
+			border: 1px solid #720151;
+			border-radius: 50vw;
 		    overflow: hidden;
-		    border: 1px solid #720151;
 
 			line {
 			    display: block;
+				position: absolute;
+				width: 110%;
+				left: -5%;
 			    background: #700050;
-			    width: 110%;
-			    left: -5%;
-			    position: absolute;
 
 				&:nth-child(1) {
 				    top: 5%;
