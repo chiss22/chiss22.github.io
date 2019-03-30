@@ -1,5 +1,5 @@
 ---
-title: CBD
+title: Hi, I am Chris; professor, logo designer, UI specialist, and VP design & dev at Sprout Studio.
 layout: default
 ---
 
