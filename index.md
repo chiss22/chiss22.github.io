@@ -11,8 +11,3 @@ layout: default
 	</article>
 {% endfor %}
 </blog>
-
-<aside>
-	<h3>Who?</h3>
-	<p>Hi, I am Chris; professor, logo designer, UI specialist, and VP design & dev at Sprout Studio.</p>
-</aside>

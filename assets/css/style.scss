@@ -17,9 +17,9 @@ body {
 	line-height: 1.6em;
 	background: $colour-bg;
 
-	h1 {
+	logo {
+		display: block;
 		position: absolute;
-		margin: 0;
 		color: #db1ee4;
 		font-family: Monoton;
 		font-size: 140px;
@@ -28,7 +28,8 @@ body {
 		text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.32), 1px 1px 2px rgba(0, 0, 0, 0.74), 0 0 20px #a958e2;
 		opacity: 0.4;
 	}
-	h2, h3, h4, h5, h6 {
+	h1, h2, h3, h4, h5, h6 {
+		font-family: Monoton;
 		margin: 0.6em 0 0.4em 0;
 		font-weight: 900;
 	}
@@ -116,11 +117,15 @@ body {
 	main {
 		@extend .wrapper;
 		display: grid;
-		grid-template-areas: "blog blog aside";
+		grid-template-areas: "title title" "section aside";
 	}
 
-	main blog {
-		grid-area: blog;
+	main h1 {
+		grid-area: title;
+	}
+
+	main section {
+		grid-area: section;
 	}
 
 	main aside {
