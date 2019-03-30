@@ -18,12 +18,15 @@ body {
 	background: $colour-bg;
 
 	h1 {
-		margin: 0.6em 0 0.4em 0;
-		color: #FF5722;
+		position: absolute;
+		margin: 0;
+		color: #db1ee4;
 		font-family: Monoton;
-		font-size: 100px;
+		font-size: 140px;
 		font-weight: 300;
 		line-height: 1.2;
+		text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.32), 1px 1px 2px rgba(0, 0, 0, 0.74), 0 0 20px #a958e2;
+		opacity: 0.4;
 	}
 	h2, h3, h4, h5, h6 {
 		margin: 0.6em 0 0.4em 0;
@@ -58,6 +61,7 @@ body {
 
 	/* Layout */
 	header {
+		height: 40vw;
 	    background: linear-gradient(90deg, #480032, #270250);
 	    overflow: hidden;
 
@@ -67,7 +71,7 @@ body {
 		    width: 50vw;
 		    height: 50vw;
 		    margin: 0 auto;
-			bottom: -20vw;
+			bottom: -10vw;
 			background: linear-gradient(120deg, rgb(255, 249, 180), rgb(255, 210, 82));
 		    box-shadow: 0 0 10vw 1vw rgba(255, 0, 141, 0.5), inset 0 0 10vw 0 rgba(255, 255, 255, 0.5), inset 0 0 0 1px #730151;
 			border: 1px solid #720151;
