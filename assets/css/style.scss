@@ -62,21 +62,21 @@ body {
 
 	/* Layout */
 	header {
-		height: 40vw;
+		height: 30vw;
 	    background: linear-gradient(90deg, #480032, #270250);
 	    overflow: hidden;
 
 		sun {
 			display: block;
 			position: relative;
-		    width: 50vw;
-		    height: 50vw;
+		    width: 30vw;
+		    height: 30vw;
 		    margin: 0 auto;
-			bottom: -10vw;
+			bottom: -5vw;
 			background: linear-gradient(120deg, rgb(255, 249, 180), rgb(255, 210, 82));
 		    box-shadow: 0 0 10vw 1vw rgba(255, 0, 141, 0.5), inset 0 0 10vw 0 rgba(255, 255, 255, 0.5), inset 0 0 0 1px #730151;
 			border: 1px solid #720151;
-			border-radius: 50vw;
+			border-radius: 30vw;
 		    overflow: hidden;
 
 			line {
@@ -118,7 +118,8 @@ body {
 		@extend .wrapper;
 		display: grid;
 		grid-template-areas: "title title" "section aside";
-		grid-gap: 8vw;
+		grid-row-gap: 2vw;
+		grid-column-gap: 8vw;
 	}
 
 	main h1 {
@@ -135,7 +136,10 @@ body {
 
 	footer {
 		margin: 10vw 0 0 0;
-		padding: 8vw;
 		background: linear-gradient(90deg, #480032, #270250);
+
+		section {
+			@extend .wrapper;
+		}
 	}
 }
