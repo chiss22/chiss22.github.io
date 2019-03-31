@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:200,900|Monoton');
 
 $colour-bg: #080422;
-$colour-text: rgba(255,255,255,0.9);
+$colour-text: rgba(255,255,255,0.85);
 $colour-link: rgba(255,255,255,1);
 $colour-primary: #FF5722;
 
@@ -118,6 +118,7 @@ body {
 		@extend .wrapper;
 		display: grid;
 		grid-template-areas: "title title" "section aside";
+		grid-gap: 2vh;
 	}
 
 	main h1 {
