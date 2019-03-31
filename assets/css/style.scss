@@ -120,6 +120,7 @@ body {
 		grid-template-areas: "title title" "section section"  "aside aside";
 		grid-row-gap: 2vw;
 		grid-column-gap: 8vw;
+		position: relative;
 
 		@media (min-width: 640px) {
 			grid-template-areas: "title title" "section aside";
