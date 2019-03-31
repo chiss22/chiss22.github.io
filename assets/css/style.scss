@@ -120,18 +120,22 @@ body {
 		grid-template-areas: "title title" "section aside";
 		grid-row-gap: 2vw;
 		grid-column-gap: 8vw;
-	}
 
-	main h1 {
-		grid-area: title;
-	}
+		h1 { grid-area: title; }
+		section { grid-area: section; }
+		aside { grid-area: aside; }
 
-	main section {
-		grid-area: section;
-	}
+		section {
+			blog {
+				content {
+					display: none;
 
-	main aside {
-		grid-area: aside;
+					@media (min-width: 640px) {
+						display: block;
+					}
+				}
+			}
+		}
 	}
 
 	footer {
