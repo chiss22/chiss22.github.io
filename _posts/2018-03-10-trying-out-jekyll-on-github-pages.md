@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: "Trying out Jekyll on GitHub Pages"
 date: 2018-03-10
 categories: development
