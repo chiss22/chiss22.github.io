@@ -3,11 +3,22 @@ title: Hi, I am Chris; professor, logo designer, UI specialist, and VP design & 
 layout: default
 ---
 
-<blog>
-{% for post in site.posts %}
-	<article>
-		<h2><a href="{{ post.url }}">{{ post.title}}</a></h2>
-		<span class="posts-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-	</article>
-{% endfor %}
-</blog>
+<section>
+	<blog>
+	{% for post in site.posts %}
+		<article>
+			<h2><a href="{{ post.url }}">{{ post.title}}</a></h2>
+			<span class="posts-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+			{{ content }}
+		</article>
+	{% endfor %}
+	</blog>
+</section>
+<aside>
+	<h3>Archives</h3>
+	<ul>
+	{% for post in site.posts %}
+		<li><a href="{{ post.url }}">{{ post.title}}</a></li>
+	{% endfor %}
+	</ul>
+</aside>
