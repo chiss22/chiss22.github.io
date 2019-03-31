@@ -7,7 +7,7 @@ layout: default
 {% for post in site.posts %}
 	<article>
 		<h2><a href="{{ post.url }}">{{ post.title}}</a></h2>
-		<meta class="posts-date">{{ post.date | date: "%b %-d, %Y" }}</meta>
+		<date>{{ post.date | date: "%b %-d, %Y" }}</date>
 		<content>{{ content }}</content>
 	</article>
 {% endfor %}
