@@ -117,9 +117,13 @@ body {
 	main {
 		@extend .wrapper;
 		display: grid;
-		grid-template-areas: "title title" "section aside";
+		grid-template-areas: "title title" "section section";
 		grid-row-gap: 2vw;
 		grid-column-gap: 8vw;
+
+		@media (min-width: 640px) {
+			grid-template-areas: "title title" "section aside";
+		}
 
 		h1 { grid-area: title; }
 		section { grid-area: section; }
