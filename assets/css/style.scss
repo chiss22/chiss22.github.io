@@ -9,10 +9,11 @@ $colour-link: rgba(255,255,255,1);
 $colour-primary: #FF5722;
 
 @mixin line($dir, $num) {
-	@for $i from 1 through $num
-		&:nth-of-type($num) {
-			$dir: (100 / $num) + $num;
+	@for $i from 1 through $num {
+		&:nth-of-type(#{$i}) {
+			#{$dir}: (100% / ($num - 1)) * ($i - 1);
 		}
+	}
 }
 
 body {
@@ -167,7 +168,7 @@ body {
 				    height: 1px;
 				    background: #810c80;
 
-					@include line(left, 12);
+					@include line(top, 12);
 				}
 
 				vline {
@@ -176,6 +177,8 @@ body {
 				    width: 1px;
 				    height: 100%;
 				    background: #810c80;
+
+					@include line(right, 12);
 				}
 			}
 
