@@ -8,6 +8,13 @@ $colour-text: rgba(255,255,255,0.85);
 $colour-link: rgba(255,255,255,1);
 $colour-primary: #FF5722;
 
+@mixin line($dir, $num) {
+	@for $i from 1 through $num
+		&:nth-of-type($num) {
+			$dir: (100 / $num) + $num;
+		}
+}
+
 body {
 	margin: 0;
 	font-family: Nunito;
@@ -160,12 +167,7 @@ body {
 				    height: 1px;
 				    background: #810c80;
 
-					&:nth-child(1) { top: 0vh; }
-					&:nth-child(2) { top: 1vh; }
-					&:nth-child(3) { top: 2.5vh; }
-					&:nth-child(4) { top: 4.5vh; }
-					&:nth-child(5) { top: 8vh; }
-					&:nth-child(6) { top: 14vh; }
+					@include line(left, 12);
 				}
 
 				vline {
@@ -174,13 +176,6 @@ body {
 				    width: 1px;
 				    height: 100%;
 				    background: #810c80;
-
-					&:nth-child(1) { left: 0vh; }
-					&:nth-child(2) { left: 1vh; }
-					&:nth-child(3) { left: 2.5vh; }
-					&:nth-child(4) { left: 4.5vh; }
-					&:nth-child(5) { left: 8vh; }
-					&:nth-child(6) { left: 14vh; }
 				}
 			}
 
