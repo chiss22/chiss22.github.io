@@ -124,18 +124,6 @@ body {
 		h1 { grid-area: title; }
 		section { grid-area: section; }
 		aside { grid-area: aside; }
-
-		section {
-			blog {
-				content {
-					display: none;
-
-					@media (min-width: 640px) {
-						display: block;
-					}
-				}
-			}
-		}
 	}
 
 	footer {
@@ -144,6 +132,24 @@ body {
 
 		section {
 			@extend .wrapper;
+		}
+	}
+
+	/* Pages */
+
+	&#page-home {
+		main {
+			section {
+				blog {
+					content {
+						display: none;
+
+						@media (min-width: 640px) {
+							display: block;
+						}
+					}
+				}
+			}
 		}
 	}
 }
