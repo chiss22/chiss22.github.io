@@ -8,11 +8,17 @@ $colour-text: rgba(255,255,255,0.85);
 $colour-link: rgba(255,255,255,1);
 $colour-primary: #FF5722;
 
-@mixin line($dir, $num, $m) {
+@mixin line($dir, $num, $exponential) {
 	@for $i from 1 through $num {
-		&:nth-of-type(#{$i}) {
-			#{$dir}: ((100% / ($num - 1)) * ($i - 1) * $m);
-		}
+	  @if $exponential == true {
+  		&:nth-of-type(#{$i}) {
+  			#{$dir}: (((100% / ($num - 1)) * ($i - 1)) * $i / $num);
+  		}
+	  } @else {
+	    &:nth-of-type(#{$i}) {
+  			#{$dir}: (((100% / ($num - 1)) * ($i - 1)));
+  		}
+	  }
 	}
 }
 
@@ -168,7 +174,7 @@ body {
 				    height: 1px;
 				    background: #810c80;
 
-					@include line(top, 6, 1.3);
+					@include line(top, 6, true);
 				}
 
 				vline {
@@ -178,7 +184,7 @@ body {
 				    height: 100%;
 				    background: #810c80;
 
-					@include line(right, 12, 1);
+					@include line(right, 12, false);
 				}
 			}
 
