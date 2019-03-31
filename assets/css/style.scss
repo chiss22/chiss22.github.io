@@ -1,7 +1,7 @@
 ---
 ---
 
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:300|Monoton');
+@import url('https://fonts.googleapis.com/css?family=Nunito:100,900|Monoton');
 
 $colour-bg: #080422;
 $colour-text: rgba(255,255,255,0.9);
@@ -10,7 +10,7 @@ $colour-primary: #FF5722;
 
 body {
 	margin: 0;
-	font-family: Ubuntu;
+	font-family: Nunito;
 	color: $colour-text;
 	font-size: 18px;
 	font-weight: 100;
@@ -29,7 +29,6 @@ body {
 		opacity: 0.4;
 	}
 	h1, h2, h3, h4, h5, h6 {
-		font-family: Monoton;
 		margin: 0.6em 0 0.4em 0;
 		font-weight: 900;
 	}
