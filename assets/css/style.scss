@@ -68,7 +68,8 @@ body {
 		}
 	}
 
-	.wrapper {
+	wrapper {
+		display: block;
 		margin: 0 auto;
 		max-width: calc(900px + 30px);
 		padding: 10vw 5vw 0;
@@ -140,9 +141,9 @@ body {
 			grid-template-areas: "title title" "section aside";
 		}
 
-		h1 { grid-area: title; @extend .wrapper; }
-		section { grid-area: section; @extend .wrapper; }
-		aside { grid-area: aside; @extend .wrapper; }
+		h1 { grid-area: title; }
+		section { grid-area: section; }
+		aside { grid-area: aside; }
 	}
 
 	footer {
