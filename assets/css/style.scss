@@ -186,7 +186,7 @@ body {
 				    width: 1px;
 				    height: 100%;
 				    background: #810c80;
-					transform: rotateX(25deg)
+					transform: rotateX(25deg);
 
 					@include line(right, 12, false);
 				}
