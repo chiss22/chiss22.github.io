@@ -188,7 +188,7 @@ body {
 				    width: 100%;
 				    height: 1px;
 				    background: #810c80;
-					animation: driving infinite steps(10);
+					animation: driving 2s infinite steps(10);
 
 					@include line(top, 12, false);
 				}
