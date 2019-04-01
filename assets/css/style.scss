@@ -159,51 +159,55 @@ body {
 
 	&#page-home {
 		main {
-			plane {
-			    display: block;
-			    position: absolute;
-			    top: 0;
-				left: calc(-25% + 5vw);
-				width: calc(150% + 10vw);
+			grid {
+				display: block;
 				height: 60vh;
-			    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(8, 4, 34, 0));
-			    z-index: -1;
 				perspective: 100px;
 				perspective-origin: top;
 				overflow: hidden;
 
-				&:after {
-				    content: '';
-				    position: absolute;
-				    bottom: 0;
-				    width: 100%;
-				    height: 80%;
-				    background: linear-gradient(rgba(8, 4, 34, 0), rgb(8, 4, 34));
-				    z-index: 1;
-				}
-
-				hline {
+				plane {
 				    display: block;
 				    position: absolute;
-				    width: 100%;
-				    height: 1px;
-				    background: #810c80;
-					animation: driving 2s infinite steps(10);
-
-					@include line(top, 12, false);
-				}
-
-				vline {
-				    display: block;
-				    position: absolute;
-					top: -98px;
-				    width: 1px;
-				    height: 100%;
-				    background: #810c80;
+				    top: 0;
+					left: calc(-25% + 5vw);
+					width: calc(150% + 10vw);
+				    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(8, 4, 34, 0));
+				    z-index: -1;
 					transform: rotateX(25deg);
-					z-index: -1;
 
-					@include line(right, 24, false);
+					&:after {
+					    content: '';
+					    position: absolute;
+					    bottom: 0;
+					    width: 100%;
+					    height: 80%;
+					    background: linear-gradient(rgba(8, 4, 34, 0), rgb(8, 4, 34));
+					    z-index: 1;
+					}
+
+					hline {
+					    display: block;
+					    position: absolute;
+					    width: 100%;
+					    height: 1px;
+					    background: #810c80;
+						animation: driving 1s infinite steps(5);
+
+						@include line(top, 12, false);
+					}
+
+					vline {
+					    display: block;
+					    position: absolute;
+						top: -98px;
+					    width: 1px;
+					    height: 100%;
+					    background: #810c80;
+						z-index: -1;
+
+						@include line(right, 24, false);
+					}
 				}
 			}
 
@@ -232,9 +236,9 @@ body {
 
 @keyframes driving {
 	0% {
-		transform: transition3D(0, 0, 0);
+		transform: translate3D(0, 0, 0);
 	}
 	100% {
-		transform: transition3D((40vw / 12), 0, 0);
+		transform: translate3D((0, 40vw / 12), 0);
 	}
 }
