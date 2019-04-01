@@ -235,6 +235,6 @@ body {
 		transform: transition3D(0, 0, 0);
 	}
 	100% {
-		transform: transition3D(0, (40 / 12), 0);
+		transform: transition3D((40vw / 12), 0, 0);
 	}
 }
