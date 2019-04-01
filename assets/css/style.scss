@@ -133,7 +133,6 @@ body {
 		grid-row-gap: 2vw;
 		grid-column-gap: 8vw;
 		position: relative;
-		overflow: hidden;
 		@extend .wrapper;
 
 		@media (min-width: 640px) {
@@ -160,7 +159,11 @@ body {
 		main {
 			grid {
 				display: block;
+				position: absolute;
+				top: 0;
+				width: 100vw;
 				height: 60vh;
+				max-height: 500px;
 				perspective: 100px;
 				perspective-origin: top;
 				overflow: hidden;
@@ -169,8 +172,9 @@ body {
 				    display: block;
 				    position: absolute;
 				    top: 0;
-					left: calc(-25% + 5vw);
-					width: calc(150% + 10vw);
+					left: -60%;
+					width: 220%;
+					height: 100%;
 				    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(8, 4, 34, 0));
 				    z-index: -1;
 					transform: rotateX(25deg);
@@ -238,6 +242,6 @@ body {
 		transform: translate3D(0, 0, 0);
 	}
 	100% {
-		transform: translate3D((0, 40vw / 12), 0);
+		transform: translate3D(0, (40vw / 12), 0);
 	}
 }
