@@ -242,6 +242,6 @@ body {
 		transform: translate3D(0, 0, 0);
 	}
 	100% {
-		transform: translate3D(0, (40vw / 12), 0);
+		transform: translate3D(0, ((40vw / 12) + 1), 0);
 	}
 }
