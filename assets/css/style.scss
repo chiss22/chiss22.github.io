@@ -151,7 +151,7 @@ body {
 		background: linear-gradient(90deg, #480032, #270250);
 
 		section {
-			@extend .wrapper;
+			@extend wrapper;
 		}
 	}
 
