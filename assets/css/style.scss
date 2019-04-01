@@ -167,6 +167,17 @@ body {
 				perspective: 100px;
 				perspective-origin: top;
 				overflow: hidden;
+				z-index: -1;
+
+				&:after {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					width: 100%;
+					height: 80%;
+					background: linear-gradient(rgba(8, 4, 34, 0), rgb(8, 4, 34));
+					z-index: 1;
+				}
 
 				plane {
 				    display: block;
@@ -176,18 +187,7 @@ body {
 					width: 220%;
 					height: 100%;
 				    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(8, 4, 34, 0));
-				    z-index: -1;
 					transform: rotateX(25deg);
-
-					&:after {
-					    content: '';
-					    position: absolute;
-					    bottom: 0;
-					    width: 100%;
-					    height: 80%;
-					    background: linear-gradient(rgba(8, 4, 34, 0), rgb(8, 4, 34));
-					    z-index: 1;
-					}
 
 					hline {
 					    display: block;
@@ -195,7 +195,7 @@ body {
 					    width: 100%;
 					    height: 1px;
 					    background: #810c80;
-						animation: driving 1s infinite steps(5);
+						animation: driving 1s infinite linear;
 
 						@include line(top, 12, false);
 					}
