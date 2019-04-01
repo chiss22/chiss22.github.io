@@ -68,11 +68,10 @@ body {
 		}
 	}
 
-	wrapper {
-		display: block;
+	.wrapper {
 		margin: 0 auto;
-		max-width: calc(900px + 30px);
-		padding: 10vw 5vw 0;
+		max-width: 1000px;
+		padding: 4vw 5vw 4vw;
 	}
 
 	/* Layout */
@@ -136,6 +135,7 @@ body {
 		grid-column-gap: 8vw;
 		position: relative;
 		overflow: hidden;
+		@extend .wrapper;
 
 		@media (min-width: 640px) {
 			grid-template-areas: "title title" "section aside";
@@ -151,7 +151,7 @@ body {
 		background: linear-gradient(90deg, #480032, #270250);
 
 		section {
-			@extend wrapper;
+			@extend .wrapper;
 		}
 	}
 
@@ -163,8 +163,8 @@ body {
 			    display: block;
 			    position: absolute;
 			    top: 0;
-				left: -25%;
-				width: 150%;
+				left: -25% + 5vw;
+				width: 150% + 10vw;
 				height: 60vh;
 			    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(8, 4, 34, 0));
 			    z-index: -1;

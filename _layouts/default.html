@@ -30,20 +30,18 @@
 				<vline></vline><vline></vline><vline></vline><vline></vline><vline></vline><vline></vline>
 				<vline></vline><vline></vline><vline></vline><vline></vline><vline></vline><vline></vline>
 			</plane>
-			<wrapper>
-				<h1>{{ page.title }}</h1>
-				<section>
-					{{ content }}
-				</section>
-				<aside>
-					<h3>Archives</h3>
-					<ul>
-					{% for post in site.posts %}
-						<li><a href="{{ post.url }}">{{ post.title}}</a></li>
-					{% endfor %}
-					</ul>
-				</aside>
-			</wrapper>
+			<h1>{{ page.title }}</h1>
+			<section>
+				{{ content }}
+			</section>
+			<aside>
+				<h3>Archives</h3>
+				<ul>
+				{% for post in site.posts %}
+					<li><a href="{{ post.url }}">{{ post.title}}</a></li>
+				{% endfor %}
+				</ul>
+			</aside>
 		</main>
 		<footer>
 			<section>
