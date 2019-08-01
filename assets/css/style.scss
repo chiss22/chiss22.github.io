@@ -50,6 +50,11 @@ body {
 
 	p {
 		margin: 0 0 1em 0;
+		
+		&.hero {
+			font-size: 60px;
+			font-weight: 900;
+		}
 	}
 
 	a {
