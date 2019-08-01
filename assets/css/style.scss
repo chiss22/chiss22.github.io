@@ -53,7 +53,18 @@ body {
 		
 		&.hero {
 			font-size: 60px;
-			font-weight: 900;
+		}
+	}
+	
+	.hero {
+		float: left;
+		width: 100%;
+		max-width: 60%;
+		margin: 0 auto;
+		padding: 20px;
+		
+		p {
+			font-size: 60px;
 		}
 	}
 
