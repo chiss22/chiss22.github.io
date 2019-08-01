@@ -9,9 +9,6 @@ $colour-link: rgba(255,255,255,1);
 $colour-primary: #FF5722;
 
 body {
-	display: flex;
-	align-items: center;
-	justify-items: center;
 	margin: 0;
 	font-family: Nunito;
 	color: $colour-text;
@@ -22,26 +19,6 @@ body {
 
 	p {
 		margin: 0 0 1em 0;
-	}
-	
-	main.hero {
-		width: 100%;
-		max-width: 1000px;
-		margin: 0 auto;
-		padding: 20px;
-		
-		img {
-			border-radius: 1000px:
-		}
-		
-		h2 {
-			margin: 0;
-		}
-		
-		p {
-			font-size: 40px;
-			line-height: 1.4;
-		}
 	}
 
 	a {
@@ -57,6 +34,34 @@ body {
 			color: $colour-bg;
 			background: $colour-link;
 			border-bottom-color: $colour-link;
+		}
+	}
+	
+	wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		min-height: 100%;
+	
+		main.hero {
+			width: 100%;
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 20px;
+
+			img {
+				border-radius: 1000px:
+			}
+
+			h2 {
+				margin: 0;
+			}
+
+			p {
+				font-size: 40px;
+				line-height: 1.4;
+			}
 		}
 	}
 }
