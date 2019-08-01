@@ -1,28 +1,17 @@
 ---
 ---
 
-@import url('https://fonts.googleapis.com/css?family=Nunito:200,900|Monoton');
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,900');
 
 $colour-bg: #080422;
 $colour-text: rgba(255,255,255,0.85);
 $colour-link: rgba(255,255,255,1);
 $colour-primary: #FF5722;
 
-@mixin line($dir, $num, $exponential) {
-	@for $i from 1 through $num {
-	  @if $exponential == true {
-  		&:nth-of-type(#{$i}) {
-  			#{$dir}: (((100% / ($num - 1)) * ($i - 1)) * $i / $num);
-  		}
-	  } @else {
-	    &:nth-of-type(#{$i}) {
-  			#{$dir}: (((100% / ($num - 1)) * ($i - 1)));
-  		}
-	  }
-	}
-}
-
 body {
+	display: flex;
+	align-items: center;
+	justify-items: center;
 	margin: 0;
 	font-family: Nunito;
 	color: $colour-text;
@@ -31,40 +20,19 @@ body {
 	line-height: 1.6;
 	background: $colour-bg;
 
-	logo {
-		display: block;
-		position: absolute;
-		color: #db1ee4;
-		font-family: Monoton;
-		font-size: 140px;
-		font-weight: 300;
-		line-height: 1.2;
-		text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.32), 1px 1px 2px rgba(0, 0, 0, 0.74), 0 0 20px #a958e2;
-		opacity: 0.4;
-	}
-	h1, h2, h3, h4, h5, h6 {
-		margin: 0.6em 0 0.4em 0;
-		font-weight: 900;
-		line-height: 1.2;
-	}
-
 	p {
 		margin: 0 0 1em 0;
-		
-		&.hero {
-			font-size: 60px;
-		}
 	}
 	
-	.hero {
-		float: left;
+	main.hero {
 		width: 100%;
-		max-width: 60%;
+		max-width: 1000px;
 		margin: 0 auto;
 		padding: 20px;
 		
 		p {
-			font-size: 60px;
+			font-size: 40px;
+			line-height: 1.3;
 		}
 	}
 
@@ -82,184 +50,5 @@ body {
 			background: $colour-link;
 			border-bottom-color: $colour-link;
 		}
-	}
-
-	.wrapper {
-		margin: 0 auto;
-		padding: 4vw 5vw 4vw;
-	}
-
-	/* Layout */
-	header {
-		height: 30vw;
-	    background: linear-gradient(90deg, #480032, #270250);
-	    overflow: hidden;
-
-		sun {
-			display: block;
-			position: relative;
-		    width: 40vw;
-		    height: 40vw;
-		    margin: 0 auto;
-			bottom: -5vw;
-			background: linear-gradient(120deg, rgb(255, 249, 180), rgb(255, 210, 82));
-		    box-shadow: 0 0 10vw 1vw rgba(255, 0, 141, 0.5), inset 0 0 10vw 0 rgba(255, 255, 255, 0.5), inset 0 0 0 1px #730151;
-			border: 1px solid #720151;
-			border-radius: 40vw;
-		    overflow: hidden;
-
-			line {
-			    display: block;
-				position: absolute;
-				width: 110%;
-				left: -5%;
-			    background: #700050;
-
-				&:nth-child(1) {
-				    top: 4%;
-				    height: 4vw;
-				}
-				&:nth-child(2) {
-				    top: 15%;
-				    height: 3vw;
-				}
-				&:nth-child(3) {
-				    top: 24%;
-				    height: 2vw;
-				}
-				&:nth-child(4) {
-				    top: 32%;
-				    height: 1.6vw;
-				}
-				&:nth-child(5) {
-				    top: 42%;
-				    height: 1.2vw;
-				}
-				&:nth-child(6) {
-				    top: 51%;
-				    height: 0.8vw;
-				}
-			}
-		}
-	}
-
-	main {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-areas: "title title" "section section"  "aside aside";
-		grid-row-gap: 2vw;
-		grid-column-gap: 8vw;
-		position: relative;
-		@extend .wrapper;
-
-		@media (min-width: 640px) {
-			grid-template-columns: 1fr minmax(auto, 33%);
-			grid-template-areas: "title title" "section aside";
-		}
-
-		h1 { grid-area: title; }
-		section { grid-area: section; }
-		aside { grid-area: aside; }
-	}
-
-	footer {
-		margin: 10vw 0 0 0;
-		background: linear-gradient(90deg, #480032, #270250);
-
-		section {
-			@extend .wrapper;
-		}
-	}
-
-	/* Pages */
-
-	&#page-home {
-		main {
-			grid {
-				display: block;
-				position: absolute;
-				top: 0;
-				width: 100vw;
-				height: 60vh;
-				max-height: 500px;
-				perspective: 100px;
-				perspective-origin: top;
-				overflow: hidden;
-				z-index: -1;
-
-				&:after {
-					content: '';
-					position: absolute;
-					bottom: 0;
-					width: 100%;
-					height: 80%;
-					background: linear-gradient(rgba(8, 4, 34, 0), rgb(8, 4, 34));
-					z-index: 1;
-				}
-
-				plane {
-				    display: block;
-				    position: absolute;
-				    top: 0;
-					left: -60%;
-					width: 220%;
-					height: 100%;
-				    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(8, 4, 34, 0));
-					transform: rotateX(25deg);
-
-					hline {
-					    display: block;
-					    position: absolute;
-					    width: 100%;
-					    height: 1px;
-					    background: #810c80;
-						animation: driving 1s infinite linear;
-
-						@include line(top, 12, false);
-					}
-
-					vline {
-					    display: block;
-					    position: absolute;
-						top: -98px;
-					    width: 1px;
-					    height: 100%;
-					    background: #810c80;
-						z-index: -1;
-
-						@include line(right, 24, false);
-					}
-				}
-			}
-
-			section {
-				blog {
-					content {
-						display: none;
-
-						@media (min-width: 640px) {
-							display: block;
-						}
-					}
-				}
-			}
-
-			aside {
-				display: none;
-
-				@media (min-width: 640px) {
-					display: block;
-				}
-			}
-		}
-	}
-}
-
-@keyframes driving {
-	0% {
-		transform: translate3D(0, 0, 0);
-	}
-	100% {
-		transform: translate3D(0, ((40vw / 12) - 0.1), 0);
 	}
 }
