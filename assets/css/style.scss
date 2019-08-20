@@ -41,8 +41,8 @@ body {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 100vw;
-		min-height: 100vh;
+		width: 100%;
+		min-height: 80vh;
 	
 		main.hero {
 			width: 100%;
@@ -55,19 +55,23 @@ body {
 			}
 
 			h2 {
+				font-size: 52px;
 				margin: 0;
 			}
 
 			p {
-				font-size: 40px;
-				line-height: 1.4;
+				font-size: 35px;
+				line-height: 1.3;
 			}
 		}
 	}
 	
 	.blog {
-		float: left;
+		display: flex;
+		flex-direction: column;
 		width: 100%;
-		margin: 20vh 0 10vh 0;
+		max-width: 1000px;
+		margin: 0 auto 20px auto;
+		padding: 20px;
 	}
 }
