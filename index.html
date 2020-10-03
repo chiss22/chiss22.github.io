@@ -1,47 +1,23 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Chris Bowman</title>
-  <meta name="author" content="">
-  <meta name="description" content="">
+  <meta name="author" content="Chris Bowman">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
   <link rel="stylesheet" href="/assets/css/style.css">
-  
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $.getJSON('https://api.sheety.co/d5e3ff0e-bc2d-41de-90fe-f5b9d706b0b2', function(data) {
-        var template = Handlebars.compile($('#item-template').html())
-        $('#items').html(template(data))
-      })
-    })
-  </script>
-  <script id="item-template" type="text/x-handlebars-template">
-    {{#each this}}
-      <article>
-        <h2>{{title}}</h2>
-        <meta>{{date}} {{tags}}</meta>
-        <div>
-          {{{content}}}
-        </div>
-      </article>
-    {{/each}}
-  </script>
 </head>
-
 <body>
   <wrapper>
-    <a href="https://chrisbowman22.wordpress.com/">Blog</a>
     <main class="hero">
       <img src="https://en.gravatar.com/userimage/41472486/4cb7c90a93580d58658a6df5ba032830.jpeg">
       <h2>Hi, I'm Chris, nice to meet you!</h2>
-      <p>I've been designing and developing on the web since 2004. I am a co-founder of <a href="https://getsproutstudio.com/">Sprout Studio</a> where I lead the design and development team. During the school year, I teach web dev at <a href="https://niagaracollege.ca/">Niagara College</a>, and on my spare time I do mini-design projects (logos, website, etc) for awesome people. <a href="mailto:chriswrbowman@gmail.com">Email me</a>. <a href="https://instagram.com/chrisbowman22">Follow me</a></p>
+      <p>I've been designing and developing on the web since 2004, and teaching the next gen how to "web" since 2013. I am a co-founder of <a href="https://getsproutstudio.com/">Sprout Studio</a> where I lead the design and development team. I teach web dev (and related) at <a href="https://niagaracollege.ca/">Niagara College Canada</a>, and on my spare time I do mini-design projects (logos, website, etc) for awesome people.</p>
+      <p><a href="/Chris_Bowman_CV.pdf" target="_blank">Download my CV</a>, follow me on <a href="https://instagram.com/chrisbowman22">IG</a>, or subscribe on <a href="https://www.youtube.com/channel/UCbe-8K53R_e9mwHnbV0iqRw?view_as=subscriber" target="_blank">YT</a>.</p>
     </main>
   </wrapper>
+  <footer>
+    &copy; 2020 Chris Bowman
+  </footer>
 </body>
-
 </html>
