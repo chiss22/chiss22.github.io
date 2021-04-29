@@ -9,6 +9,7 @@ $colour-link: rgba(255,255,255,1);
 $colour-primary: #FF5722;
 
 body {
+	display: grid;
 	min-height: 100vh;
 	margin: 0;
 	font-family: Nunito;
@@ -47,12 +48,9 @@ body {
 		max-width: 600px;
 		min-height: 80vh;
 		margin: 20px auto;
+		padding: 40px;
 	
 		main.hero {
-			width: 100%;
-			margin: 0 auto;
-			padding: 40px;
-
 			img {
 				width: 100%;
 				max-width: 200px;
@@ -77,7 +75,8 @@ body {
 	footer {
 		width: 100%;
 		max-width: 600px;
-		margin: 0 auto 30px auto;
+		margin: 0 auto;
+		padding: 0 40px 60px 40px;
 		opacity: 0.6;
 	}
 }
