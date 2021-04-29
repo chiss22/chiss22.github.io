@@ -44,15 +44,19 @@ body {
 		align-items: center;
 		justify-content: center;
 		width: 100%;
+		max-width: 600px;
 		min-height: 80vh;
+		margin: 20px auto;
+		text-align: center;
 	
 		main.hero {
 			width: 100%;
-			max-width: 1000px;
 			margin: 0 auto;
 			padding: 40px;
 
 			img {
+				width: 100%;
+				max-width: 200px;
 				border-radius: 1000px;
 			}
 
