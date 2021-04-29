@@ -9,17 +9,18 @@ $colour-link: rgba(255,255,255,1);
 $colour-primary: #FF5722;
 
 body {
+	min-height: 100vh;
 	margin: 0;
 	font-family: Nunito;
 	color: $colour-text;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 200;
-	line-height: 1.6;
 	background-image: $colour-bg;
 	background-size: cover;
 
 	p {
 		margin: 0 0 1em 0;
+		line-height: 1.6;
 	}
 
 	a {
@@ -27,13 +28,13 @@ body {
 		&:visited {
 			color: $colour-link;
 			text-decoration: none;
-			border-bottom: 4px solid rgba(255,255,255,0.4);
-			transition: all 0.2s;
+			border-bottom: 2px solid rgba(255,255,255,0.4);
+			transition: color 0.2s;
 		}
 		&:hover,
 		&:active {
 			color: $colour-bg;
-			background: $colour-link;
+			background: $colour-primary;
 			border-bottom-color: $colour-link;
 		}
 	}
@@ -49,20 +50,19 @@ body {
 			width: 100%;
 			max-width: 1000px;
 			margin: 0 auto;
-			padding: 20px;
+			padding: 40px;
 
 			img {
 				border-radius: 1000px;
 			}
 
 			h2 {
-				font-size: 52px;
+				font-size: 40px;
 				margin: 10px 0 0 0;
 			}
 
 			p {
-				font-size: 30px;
-				line-height: 1.4;
+				font-size: 24px;
 				
 				&.small {
 					font-size: 22px;
@@ -75,5 +75,6 @@ body {
 		max-width: 1000px;
 		margin: 0 auto;
 		padding: 20px;
+		opacity: 0.6;
 	}
 }
