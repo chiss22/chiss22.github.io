@@ -15,7 +15,8 @@ body {
 	font-size: 18px;
 	font-weight: 200;
 	line-height: 1.6;
-	background: $colour-bg;
+	background-image: $colour-bg;
+	background-size: cover;
 
 	p {
 		margin: 0 0 1em 0;
