@@ -11,7 +11,7 @@
   <wrapper>
     <main class="hero">
       <img src="https://secure.gravatar.com/avatar/e86ae93b8203ccd87524e01728de6856?size=400">
-      <h2 data-random-intro>Good day!</h2>
+      <h2 id="random-intro">Good day!</h2>
       <p>I am super passionate about the web, and have been since 2004. I've been teaching the next generation how to "web" since 2013 at Niagara College. I am a co-founder of <a href="https://getsproutstudio.com/">Sprout Studio</a>, now owned by the awesome <a href="https://findfreedom.io">Freedom</a>, where I serve as the Director of Product..</p>
       <p class="small">Download my <a href="/Chris%20Bowman%20-%20CV.pdf" target="_blank">CV</a>, follow me on <a href="https://instagram.com/chrisbowman22">IG</a>, or subscribe on <a href="https://www.youtube.com/channel/UCbe-8K53R_e9mwHnbV0iqRw?view_as=subscriber" target="_blank">YT</a>.</p>
     </main>
@@ -20,7 +20,7 @@
     &copy; 2025
   </footer>
   <script>
-    let random_intro_element = document.querySelector('[data-random-intro]'),
+    let random_intro_element = document.querySelector('#random-intro'),
       random_intros = ['Good day!', 'Why hello there!', 'Yo, mate!', 'Welcome my friend!', 'Bonjour, mes amis!', 'Salut!', 'Cheers!', 'Yar!', 'Meow!'];
 
     function getRandy(arr) {
