@@ -31,6 +31,7 @@ body {
 	font-weight: 200;
 	background-image: linear-gradient(40deg, var(--colour-dark), var(--colour-medium));
 	background-size: cover;
+	overflow-x: hidden;
 }
 
 /* Typography */
