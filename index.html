@@ -13,24 +13,47 @@
 <body class="page__home">
 	<wrapper>
 		<header>
-			<logo>
-				Chris Bowman
-			</logo>
+			<a href="index.html" title="Home" class="logo">Chris Bowman</a>
 			<nav>
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="cv.html">Resume</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="https://chrisbowman22.substack.com/">Substack <i class="fas fa-arrow-up-right-from-square"></i></a></li>
 				</ul>
 			</nav>
 		</header>
 		<main>
-			<h1><img src="https://secure.gravatar.com/avatar/e86ae93b8203ccd87524e01728de6856?size=400" alt="Chris Bowman profile picture" width="100" height="100"> Passionate about the web since '04</h1>
-			<p><strong id="random-intro"></strong> I am a UX/UI expert by trade, and have been <a href="https://niagaracollege.ca/" title="Niagara College Canada"></a>teaching</a> the next generation of web developers, designers, and content creators for over 11 years. Co-founder of <a href="https://getsproutstudio.com/">Sprout Studio</a>, now owned by <a href="https://findfreedom.io">FindFreedom</a>, where I serve as the Director of Product and lead day-to-day execution and shaping of our product vision.</p>
+			<section class="hero">
+				<aside>
+					<h1>Passionate about the web since '04</h1>
+					<p class="big">
+						<strong id="random-intro"></strong> I am a UX/UI expert by trade, and have been <a href="https://niagaracollege.ca/" title="Niagara College Canada"></a>teaching</a> the next generation of web developers, designers, and content creators for over 11 years. Co-founder of <a href="https://getsproutstudio.com/">Sprout Studio</a>, now owned by <a href="https://findfreedom.io">FindFreedom</a>, where I serve as the Director of Product and lead day-to-day execution and shaping of our product vision.
+					</p>
+					<a class="button" href="cv.html">Read resume</a>
+				</aside>
+				<img src="https://secure.gravatar.com/avatar/e86ae93b8203ccd87524e01728de6856?size=400" alt="Chris Bowman profile picture" width="200" height="200" class="profile">
+			</section>
+			<section class="m-top-40">
+				<h2>Projects</h2>
+				<card-wrapper>
+					<card class="featured">
+						<h2 class="match-h6 m-top-0 o-6">Sprout Studio</h2>
+						<h3 class="match-h5 m-top-0"><a href="https://getsproutstudio.com/" target="_blank">Visit Sprout</a></h3>
+						<p class="o-8"><i class="fas fa-question-circle o-4"></i> A powerful studio management software for photographers and videographers.</p>
+					</card>
+					<card class="featured">
+						<h2 class="match-h6 m-top-0 o-6">Wizard wisdom for ADHD adults</h2>
+						<h3 class="match-h5 m-top-0">"<span id="wizard_wisdom"></span>"</h3>
+						<p><i class="fas fa-question-circle o-4"></i> A collection of tips and tricks to help adults with ADHD manage their daily lives.</p>
+					</card>
+				</card-wrapper>
+			</section>
 		</main>
 	</wrapper>
 	<footer>
-		<p class="small">Download my <a href="/Chris%20Bowman%20-%20CV.pdf" target="_blank">CV</a>, follow me on <a href="https://instagram.com/chrisbowman22">IG</a>, or subscribe on <a href="https://www.youtube.com/channel/UCbe-8K53R_e9mwHnbV0iqRw?view_as=subscriber" target="_blank">YT</a>.</p>
-		&copy; 2025
+		<p>Download my <a href="/Chris%20Bowman%20-%20CV.pdf" target="_blank">CV</a>, follow me on <a href="https://instagram.com/chrisbowman22">IG</a>, or subscribe on <a href="https://www.youtube.com/channel/UCbe-8K53R_e9mwHnbV0iqRw?view_as=subscriber" target="_blank">YT</a>.</p>
+		<p class="small">&copy; 2025, Photo by Chris Bowman, all rights reserved.</p>
 	</footer>
 	<script>
 		let random_intro_element = document.querySelector('#random-intro'),
@@ -42,6 +65,36 @@
 		}
 
 		random_intro_element.textContent = getRandy(random_intros);
+
+		// Array machine
+		var wizard_words = [
+			"Cast not one, but five alarm enchantments — lest ye rise and forget why thou hath risen!",
+			"Inscribe thy sacred runes (some call them sticky notes) upon every surface — walls, mirrors, even familiars.",
+			"If thy mind goeth blank, fret not! 'Tis surely the workings of a grander spell thou hast yet to recall.",
+			"Schedule thine ‘Gaze into the Void’ rituals — for lo, the stars often whisper wisdom during such trances.",
+			"Should thy to-do scroll vanish, rejoice! The winds of spontaneity now guide thy destiny!",
+			"When distracted, proclaim boldly, 'Aha! A new quest!' and proceed as though planned all along.",
+			"Banish clutter by sealing it within mystical drawers labeled ‘ORDER’ — out of sight, out of peril!",
+			"Transform chores into mighty quests! Fold thy laundry, and become Champion of the Sock Realms!",
+			"Use timers enchanted with sound — though beware, for even magic fades if thou forgets to invoke it.",
+			"Reward thy victories, great or small, with morsels of delight. Conquer a task? Feast like a warlock!",
+		],
+		wizard_element = document.querySelector('#wizard_wisdom');
+		function printWizard() {
+			wizard_element.innerHTML = '';
+			wizard_element.classList.remove('active');
+			setTimeout(function(){
+				var the_wizard = getWizardWords();
+				wizard_element.innerHTML = the_wizard;
+				wizard_element.classList.add('active');
+			}, 50);
+		}
+
+		function getWizardWords() {
+			return wizard_words[wizard_words.length * Math.random() | 0];
+		}
+
+		printWizard();
 	</script>
 </body>
 </html>
