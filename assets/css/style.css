@@ -18,6 +18,10 @@
 
 * { box-sizing: border-box; }
 
+html {
+	font-size: clamp(16px, 4vw, 18px);
+}
+
 body {
 	display: grid;
 	min-height: 100vh;
@@ -26,8 +30,7 @@ body {
 	font-optical-sizing: auto;
 	font-style: normal;
 	color: var(--colour-text);
-	font-size: 16px;
-	font-size: clamp(1rem, 4vw, 1.2rem);
+	font-size: 1rem;
 	font-weight: 200;
 	background-image: linear-gradient(40deg, var(--colour-dark), var(--colour-medium));
 	background-size: cover;
@@ -44,23 +47,24 @@ h1, h2, h3, h4, h5, h6 {
 
 	&.match-h1 { font-size: clamp(3rem, 4vw + 1.5rem, 4rem); }
 	&.match-h2 { font-size: clamp(2rem, 4vw + 0.5rem, 3rem); }
-	&.match-h3 { font-size: clamp(1.5rem, 4vw + 0.25rem, 2.5rem); }
-	&.match-h4 { font-size: clamp(1.25rem, 4vw + 0.125rem, 2rem); }
-	&.match-h5 { font-size: clamp(1rem, 4vw, 1.5rem); }
-	&.match-h6 { font-size: clamp(0.875rem, 4vw - 0.125rem, 1.25rem); }
+	&.match-h3 { font-size: clamp(1.5rem, 4vw + 0.25rem, 2.5rem); line-height: 1.4; }
+	&.match-h4 { font-size: clamp(1.25rem, 4vw + 0.125rem, 2rem); line-height: 1.4; }
+	&.match-h5 { font-size: clamp(1rem, 4vw, 1.5rem); line-height: 1.4; }
+	&.match-h6 { font-size: clamp(0.875rem, 4vw - 0.125rem, 1.25rem); line-height: 1.4; }
 }
 
 h1 { font-size: clamp(3rem, 4vw + 1.5rem, 4rem); }
 h2 { font-size: clamp(2rem, 4vw + 0.5rem, 3rem); }
-h3 { font-size: clamp(1.5rem, 4vw + 0.25rem, 2.5rem); }
-h4 { font-size: clamp(1.25rem, 4vw + 0.125rem, 2rem); }
-h5 { font-size: clamp(1rem, 4vw, 1.5rem); }
-h6 { font-size: clamp(0.875rem, 4vw - 0.125rem, 1.25rem); }
+h3 { font-size: clamp(1.5rem, 4vw + 0.25rem, 2.5rem); line-height: 1.4; }
+h4 { font-size: clamp(1.25rem, 4vw + 0.125rem, 2rem); line-height: 1.4; }
+h5 { font-size: clamp(1rem, 4vw, 1.5rem); line-height: 1.4; }
+h6 { font-size: clamp(0.875rem, 4vw - 0.125rem, 1.25rem); line-height: 1.4; }
 
 p {
 	margin: 0 0 1em 0;
 	font-size: 1em;
-	line-height: 1.6;
+	line-height: 1.7;
+	word-break: break-word;
 	text-wrap-style: pretty;
 
 	&.small {
@@ -68,7 +72,7 @@ p {
 	}
 
 	&.big {
-		font-size: 1.25em;
+		font-size: 1.15em;
 	}
 }
 
@@ -137,6 +141,37 @@ a {
 			&::before {
 				filter: blur(15px);
 			}
+		}
+	}
+}
+
+ul,
+ol {
+	font-size: 1rem;
+	line-height: 1.7;
+
+	&.big {
+		font-size: 1.15rem;
+	}
+}
+
+ul.checkmarks {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+	list-style: none;
+
+	li {
+		margin: 0 0 0.25rem 0;
+		padding: 0 0 0 1.5rem;
+
+		&::before {
+			content: "\f00c";
+			font-family: var(--font-icons);
+			font-weight: 600;
+			position: absolute;
+			margin: 0 0 0 -1.5rem;
+			color: var(--colour-primary);
 		}
 	}
 }
@@ -228,6 +263,21 @@ a {
 .text-right { text-align: right; }
 .text-justify { text-align: justify; }
 .text-nowrap { white-space: nowrap; }
+
+/* Grid */
+[class*='grid-'] {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+
+	&.grid-2,
+	&.grid-3 { grid-template-columns: 1fr; }
+
+	@media (min-width: 640px) {
+		&.grid-2 { grid-template-columns: 1fr 1fr; }
+		&.grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+	}
+}
 
 /* Layout */
 wrapper {
@@ -344,6 +394,8 @@ wrapper {
 			@media (min-width: 800px) {
 				grid-template-columns: 1fr 1fr;
 			}
+
+			&.grid-3 { gap: 1rem; }
 		}
 
 		card {
@@ -360,7 +412,7 @@ wrapper {
 				box-shadow: 0 0 0 3px var(--colour-primary)
 			}
 
-			date {
+			info {
 				position: absolute;
 				top: 0;
 				right: 0;
@@ -369,6 +421,13 @@ wrapper {
 				background-color: rgba(255,255,255,0.1);
 				border-radius: 0 calc(var(--border-radius) - 1px) 0 calc(var(--border-radius) / 2);
 				pointer-events: none;
+			}
+
+			.card__hero {
+				width: 100%;
+				height: auto;
+				margin: 0 0 1rem 0;
+				border-radius: calc(var(--border-radius) / 2);
 			}
 
 			&:not(:has(details)) {
@@ -424,26 +483,9 @@ wrapper {
 					}
 				}
 
-				ul {
+				ul.checkmarks {
 					margin: var(--body-padding) 0 0 0;
 					padding: 0 0 0 35px;
-					font-size: 1rem;
-					line-height: 1.5;
-					list-style: none;
-
-					li {
-						margin: 0 0 0.25rem 0;
-						padding: 0 0 0 1.5rem;
-
-						&::before {
-							content: "\f00c";
-      						font-family: var(--font-icons);
-							font-weight: 600;
-							position: absolute;
-							margin: 0 0 0 -1.5rem;
-							color: var(--colour-primary);
-						}
-					}
 				}
 			}
 
