@@ -1,0 +1,160 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple HTML Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+	<style>
+		* { box-sizing: border-box; }
+		img { max-width: 100%; }
+
+		html { font-size: clamp(12px, 2vw, 14px); }
+
+		body {
+			margin: 0;
+			color: #FFFA;
+			font-size: 1rem;
+			font-family: 'Plus Jakarta Sans', sans-serif;
+			line-height: 1.6;
+			text-align: center;
+			background: #10101e;
+			background-size: 600% 600%;
+		}
+
+		h1, h2, p {
+			margin: 0.8em 0 0.4em 0;
+			color: inherit;
+			transition: color 0.3s ease;
+		}
+
+		p {
+			margin: 0 0 0.8em 0;
+		}
+		
+		h1 { font-size: 3em; }
+		h2 { font-size: 1.6em; }
+		p { font-size: 1em; }
+
+
+		header {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 1vw;
+			background: rgba(0,0,0,0.8);
+			padding: 15px clamp(20px, 5vw, 40px);
+
+			h1 {
+				font-size: 1em;
+			}
+		}
+
+		main {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 2dvh;
+			min-height: 100dvh;
+			padding: 2dvh;
+
+			@media (min-width: 600px) { grid-template-columns: repeat(2, 1fr); }
+			@media (min-width: 900px) { grid-template-columns: repeat(3, 1fr); }
+
+			a {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				padding: 4dvh;
+				color: inherit;
+				text-align: center;
+				text-decoration: none;
+				background-color: rgba(0, 0, 0, 0.8);
+				border-radius: 12px;
+				box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+				background-position: 200% 200%;
+				transform: translate3d(0, 0, 0);
+				transition: box-shadow 0.3s ease, transform 0.3s ease, background-position 0.3s ease;
+
+				&:hover,
+				&:active {
+					color: #FFF;
+					box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+					transform: translate3d(0, -4px, 0);
+					background-position: 0 0;
+				}
+
+				&.double {
+					@media (min-width: 900px) {
+						grid-column: span 2;
+						grid-row: span 2;
+						font-size: 18px;
+
+						img { height: 20dvh; }
+					}
+				}
+
+				&.admin {
+					&::after {
+						content: 'Admin Only';
+						position: absolute;
+						top: 0;
+						right: 0;
+						font-size: 0.6rem;
+						padding: 15px;
+					}
+				}
+
+				img {
+					width: auto;
+					max-width: none;
+					height: 10dvh;
+					margin: 0 0 2dvh 0;
+				}
+
+				h2, p { margin: 0; }
+
+				/* Styles */
+				&.jellyfin { background-image: linear-gradient(to top right, #6366f1, #db2777); }
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<main>
+		<a href="https://jellfin.frackintoasters.ca" class="jellyfin double">
+			<img src="img/jellyfin.svg" alt="Jellyfin Logo">
+			<h2>Jellyfin</h2>
+			<p>Media player</p>
+		</a>
+		<a href="https://jellyseerr.frackintoasters.ca">
+			<img src="img/jellyseerr.svg" alt="Jellyseerr Logo">
+			<h2>Jellyseerr</h2>
+			<p>Media requester</p>
+		</a>
+		<a href="https://sonarr.frackintoasters.ca" class="admin">
+			<img src="img/sonarr.svg" alt="Sonarr Logo">
+			<h2>Sonarr</h2>
+			<p>TV series manager</p>
+		</a>
+		<a href="https://radarr.frackintoasters.ca" class="admin">
+			<img src="img/radarr.svg" alt="Radarr Logo">
+			<h2>Radarr</h2>
+			<p>Movie manager</p>
+		</a>
+		<a href="https://prowlarr.frackintoasters.ca" class="admin">
+			<img src="img/prowlarr.svg" alt="Prowlarr Logo">
+			<h2>Prowlarr</h2>
+			<p>Indexer manager</p>
+		</a>
+		<a href="https://qbittorent.frackintoasters.ca" class="admin">
+			<img src="img/qbittorrent.svg" alt="QBitorrent Logo">
+			<h2>QBittorrent</h2>
+			<p>Torrent manager</p>
+		</a>
+	</main>
+</body>
+</html>
