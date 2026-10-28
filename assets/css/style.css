@@ -744,3 +744,20 @@ footer {
 	0% { background-position: 100% 0%; }
 	100% { background-position: 0% 0%; }
 }
+/* Recommended Resources book covers */
+.page__resources .book-cover {
+	  display: block;
+	  width: 120px;
+	  max-width: 100%;
+	  aspect-ratio: 2 / 3;
+	  object-fit: cover;
+	  margin-bottom: 1rem;
+	  border-radius: 8px;
+	  border: 1px solid #ffffff29;
+	  box-shadow: 0 10px 24px #00000073, inset 6px 0 10px -6px #0000008c;
+	  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.page__resources .book-cover:hover {
+	  transform: translateY(-4px);
+	  box-shadow: 0 16px 32px #00000080, 0 0 24px #696eff40, inset 6px 0 10px -6px #0000008c;
+}
